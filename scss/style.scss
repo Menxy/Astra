@@ -1,0 +1,325 @@
+// Импорт
+@import "nullstyle.scss";
+// Импорт
+
+//  Переменные
+$middle-width: 1017px;
+//  Переменные
+
+//Шаблоны
+%vcolumn{
+  max-width: 1300px;
+}
+// Шаблоны
+
+// Миксины. Комбинированные параметры. Потом в коде подставляем значение переменных.
+@mixin mw($w){
+  max-width: $w;
+  margin: 0 auto;
+}
+//
+// Шрифт //
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('../fonts/9404.eot');
+  src: local('☺'), url('../fonts/9404.woff') format('woff'), url('../fonts/9404.ttf') format('truetype'), url('../fonts/9404.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//
+//border: 1px solid black;
+body{
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .astra {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 834px;
+      background: url("../src/Astra.jpg") 50% 0 no-repeat;
+      .header {
+          opacity: 0.9;
+          background-color: #ffffff;
+          max-height: 89px;
+          .header__v-cage {
+            padding: 20px 0;
+            .header__h-cage {
+              display: flex;
+              flex-wrap: nowrap;
+              max-width: 944px;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 auto;
+              .header__logo {
+                .header__logo img {
+
+                }
+              }
+              .header__nav {
+                display: flex;
+                .nav__item {
+                  margin-left: 32px;
+                  opacity: 0.74;
+                  font-family: SegoeUI, sans-serif;
+                  font-size: 17px;
+                  line-height: 1.2;
+                  font-weight: 400;
+                  color: #454545;
+                  white-space: nowrap;
+                }
+                .login {
+                  background-color: #de6d6e;
+                  color: #ffffff;
+                  margin-left: 32px;
+                  border-radius: 4px;
+                  div {
+                    padding: 2px 14px 5px 33px;
+                    background: url('../src/login.png') 13px 50% no-repeat;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      .welcome {
+          color: #ffffff;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          .welcome__text {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-bottom: 70px;
+            h1 {
+              text-transform: uppercase;
+              font-size: 69px;
+              line-height: 1.2;
+              font-weight: 700;
+            }
+            p {
+              font-size: 25px;
+              line-height: 1.2;
+              font-weight: 100;
+            }
+          }
+
+      }
+      .simple {
+          //border: 1px solid black;
+          font-family: Arial, sans-serif;
+          height: 245px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .simple__h {
+            font-size: 35px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #404040;
+            padding-bottom: 20px;
+          }
+          .simple__p {
+            max-width: 827px;
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #636363;
+          }
+
+
+      }
+
+    }
+    .circles {
+      min-height: 235px;
+
+      .circles__column {
+        margin: 0 auto;
+        max-width: 940px;
+        .circles__row {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .circles__item {
+            padding: 10px;
+          }
+        }
+      }
+    }
+    .content {
+      font-family: Arial, sans-serif;
+      max-width: 1020px;
+      margin: 0 auto;
+      padding-top: 45px;
+      .content__column {
+        display: flex;
+        flex-direction: column;
+        margin-left: 7%;
+        .content__row {
+          display: flex;
+          padding-bottom: 8%;
+          .content__img {}
+          .content__text {
+            padding-left: 22px;
+            h3 {
+              padding: 5px 0;
+              font-size: 27px;
+              line-height: 1.2;
+              font-weight: 300;
+              color: #404040;
+            }
+            p {
+              font-size: 15px;
+              line-height: 22px;
+              font-weight: 300;
+              color: #8b8b8b;
+              text-align: justify;
+            }
+
+          }
+        }
+      }
+    }
+    .footer {
+      background: url("../src/footer_mini.jpg");
+      color: #8b8b8b;
+      font-family: Arial, sans-serif;
+      .footer__column {
+        max-width: 1020px;
+        margin: 0 auto;
+        //border: 1px solid #ff7bca;
+        .footer__row {
+          margin-left: 7%;
+          display: flex;
+          justify-content: space-between;
+          padding: 30px 0;
+          .footer__menus {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 5%;
+            .footer__menu {
+              h4 {
+                font-size: 21px;
+                line-height: 22px;
+                font-weight: 300;
+                padding-bottom: 15%;
+              }
+              a {
+                display: block;
+                font-size: 15px;
+                line-height: 22px;
+                font-weight: 300;
+                color: #8b8b8b;
+                padding-left: 5%;
+
+              }
+            }
+          }
+          .footer__social {
+            .footer__social__logos {
+              display: flex;
+              justify-content: space-between;
+              padding: 5% 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+
+/*
+.flex {
+  display: flex;
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+header {
+  background: linear-gradient(to bottom, rgba(236,232,157,1) 0%,rgba(94,83,115,1) 50%,rgba(24,181,164,1) 100%);
+  display: flex;
+  margin: 0 auto;
+  min-height: 40%;
+  justify-content: space-between;
+  .center {
+    align-items: center;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .sides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    img {
+      max-width: 80%;
+      width: 100%;
+    }
+  }
+}
+h1 {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 2em;
+  align-self: center;
+}
+.block {
+  width: 550px/1366px*100%; //Вычисляет ширину блока в процентах
+  >p { //Только одного уровня//
+    @include fontz(30px,darkcyan);
+  }
+  .block__text {
+    font-size: 1.5em;
+    span {
+      color: brown;
+    }
+  }
+}
+.link {
+  font-size: 24px;
+  color: #5e5373;
+  text-decoration: underline;
+  @extend %tplborder; //Подключение шаблона
+  .block &{
+    font-size: 2em;
+  }
+  &:hover{ //Для добавления псевдо- внутри самого класса//
+    color: chocolate;
+  }
+  &:active{
+    color: hotpink;
+  }
+  &:focus{
+    color: $colorizer;
+  }
+  &:before {
+    content: "";
+  }
+  &:after {
+    content: "";
+  }
+}
+.link_2 {
+  display: inline-block;
+  margin: 5%;
+  @include fontz(30px,red);
+}
+ */
